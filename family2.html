@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yahrizan Personal website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #FF4C4C;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff5050;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(255,76,76,0.7);
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+nav a {
+    display: inline-block;
+    background: rgba(255,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #FF4C4C;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+/* ===== FAMILY ALBUM (GRID 3x2) ===== */
+.family-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #111;
+    border-radius: 20px;
+    border: 2px solid red;
+    box-shadow: 0 0 25px red;
+}
+
+.family-album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.family-card {
+    background: #111;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid red;
+    box-shadow: 0 0 15px red;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.family-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid red;
+}
+
+.family-card h3 {
+    margin: 10px 0 5px;
+    color: #F5EBDD;
+}
+
+.family-card p {
+    font-size: 14px;
+    color: #ff8a8a;
+}
+
+.family-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px red;
+}
+
+/* ===== AUDIO PLAYER ===== */
+.audio-box {
+    margin-top: 40px;
+    background: rgba(255,0,0,0.15);
+    padding: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: 1px solid #ff4c4c;
+    box-shadow: 0 0 20px red;
+}
+
+.audio-box h2 {
+    color: #F5EBDD;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 2px solid #ff5050;
+    text-shadow: 0 0 10px red;
+}
+
+#datetime {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #F5EBDD;
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13.5px;
+        padding: 10px 16px;
+        border-radius: 22px;
+        transform: none !important;
+    }
+
+    .family-album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .family-card img {
+        height: 160px;
+    }
+
+    .audio-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px 12px;
+        border-radius: 20px;
+    }
+
+    .family-album {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>YAHRIZAN'S PERSONAL WEBSITE</h1>
+
+    <nav>
+        <a href="index2.html">HOME</a>
+        <a href="aboutme2.html">ABOUT ME</a>
+        <a href="family2.html" class="active">FAMILY</a>
+        <a href="experience2.html">EXPERIENCE</a>
+        <a href="friends2.html">FREINDS</a>
+        <a href="education2.html">EDUCATION</a>
+        <a href="gallery2.html">GALLERY</a>
+        <a href="favourites2.html">FAVOURITES</a>
+        <a href="hobby2.html">HOBBY</a>
+    </nav>
+</header>
+
+<section class="family-container">
+    <h2>👨‍👩‍👧‍👦 My Family</h2>
+    <p>Family is everything! Here’s a glimpse into my loved ones and our cherished moments together. 💖</p>
+
+    <div class="family-album">
+
+        <div class="family-card">
+            <img src="images/abahibu.jpg" alt="ABAH AND IBU">
+            <h3>ABAH AND IBU</h3>
+            <p>Abah — my first love, the one who always fulfils my cravings and wishes. Ibu fills the empty space in my heart.</p>
+        </div>
+
+        <div class="family-card">
+            <img src="images/kakak.jpg" alt="KAKAK">
+            <h3>KAKAK</h3>
+            <p>My only sibling — enemy, best friend, inspiration, role model.</p>
+        </div>
+
+        <div class="family-card">
+            <img src="images/rayawithmok2023.jpg" alt="Grandmother">
+            <h3>GRANDMOTHER</h3>
+            <p>She raised me with love, manners and guidance. She’s my everything.</p>
+        </div>
+
+        <div class="family-card">
+            <img src="images/raya2025.jpg" alt="RAYA 2025">
+            <h3>RAYA 2025</h3>
+            <p>Every Hari Raya, we capture beautiful memories together.</p>
+        </div>
+
+        <div class="family-card">
+            <img src="images/ADIKYEYEN.jpg" alt="MY BABIES">
+            <h3>YEYEN AND ADIK</h3>
+            <p>Proof that love comes with whiskers.</p>
+        </div>
+
+        <div class="family-card">
+            <img src="images/YOYOBB.jpg" alt="Cousin">
+            <h3>MY OREO</h3>
+            <p>I found him in semester 3. Now he's the family’s favourite.</p>
+        </div>
+
+    </div>
+</section>
+
+<div class="audio-box">
+    <h2>🎵 Currently Playing: Kucaimars – Khayalan</h2>
+    <audio controls>
+        <source src="audio/KucaimarsKhayalan.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<footer>
+    <p>&copy; 2025 Designed for Educational Purposes | YAHRIZAN</p>
+    <p id="datetime"></p>
+</footer>
+
+<script>
+function updateDateTime(){
+    const now = new Date();
+
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    let dayName = days[now.getDay()];
+    let date = now.getDate();
+    let month = months[now.getMonth()];
+    let year = now.getFullYear();
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let session = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+    minute = String(minute).padStart(2,"0");
+    second = String(second).padStart(2,"0");
+
+    document.getElementById("datetime").innerHTML =
+        `${dayName}, ${date} ${month} ${year} | ${hour}:${minute}:${second} ${session}`;
+}
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

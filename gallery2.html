@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yahrizan Personal website</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #FF4C4C;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff5050;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(255,76,76,0.7);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+nav a {
+    display: inline-block;
+    background: rgba(255,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #FF4C4C;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+
+/* ===== GALLERY MASONRY ===== */
+.gallery-container {
+    column-count: 4;
+    column-gap: 12px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 76, 76, 0.5);
+}
+
+/* ===== VIDEO SECTION ===== */
+.video-section {
+    max-width: 1200px;
+    margin: 60px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+    color: #FF4C4C;
+    text-shadow: 0 0 10px red;
+}
+
+.video-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 350px;  
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.4);
+    border: 2px solid rgba(255,0,0,0.6);
+    transition: 0.3s;
+}
+
+.video-container video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 2px solid #ff5050;
+    text-shadow: 0 0 10px red;
+}
+
+#datetime {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #F5EBDD;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .gallery-container { column-count: 3; }
+}
+@media (max-width: 900px) {
+    .gallery-container { column-count: 2; }
+}
+@media (max-width: 600px) {
+    .gallery-container { column-count: 1; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>YAHRIZAN'S PERSONAL WEBSITE</h1>
+    <nav>
+        <a href="index2.html">HOME</a>
+        <a href="aboutme2.html">ABOUT ME</a>
+        <a href="family2.html">FAMILY</a>
+        <a href="experience2.html">EXPERIENCE</a>
+        <a href="friends2.html">FRIENDS</a>
+        <a href="education2.html">EDUCATION</a>
+        <a href="gallery2.html" class="active">GALLERY</a>
+        <a href="favourites2.html">FAVOURITES</a>
+        <a href="hobby2.html">HOBBY</a>
+    </nav>
+</header>
+
+<section class="gallery-container">
+    <img src="images/weng.jpg" alt="Image 1">
+    <img src="images/moksu.jpg" alt="Image 2">
+    <img src="images/picnic 2.jpg" alt="Image 3">
+    <img src="images/NICE.jpg" alt="Image 4">
+    <img src="images/bat.jpg" alt="Image 5">
+    <img src="images/CAFE.jpg" alt="Image 6">
+    <img src="images/GUA.jpg" alt="Image 7">
+    <img src="images/VIEW.jpg" alt="Image 8">
+    <img src="images/GAMBARBUKU.jpg" alt="Image 9">
+    <img src="images/dee.jpg" alt="Image 10">
+    <img src="images/COMEY.jpg" alt="Image 11">
+    <img src="images/35 ONTOP.jpg" alt="Image 12">
+    <img src="images/GREEN.jpg" alt="Image 13">
+    <img src="images/FAMILYJPNR.jpg" alt="Image 14">
+    <img src="images/BEFOREGAME.jpg" alt="Image 15">
+    <img src="images/ESTETIK.jpg" alt="Image 16">
+    <img src="images/TINGGI.jpg" alt="Image 17">
+    <img src="images/SUNSETKISS.jpg" alt="Image 18">
+    <img src="images/GADISMELAYU.jpg" alt="Image 19">
+    <img src="images/KUCING LAGI.jpg" alt="Image 20">
+    <img src="images/MANJA.jpg" alt="Image 21">
+    <img src="images/kakjihan.jpg" alt="Image 22">
+    <img src="images/miau.jpg" alt="Image 23">
+    <img src="images/AIMIDINA.jpg" alt="Image 24">
+    <img src="images/QUOTE.jpg" alt="Image 25">
+    <img src="images/UYO.jpg" alt="Image 26">
+    <img src="images/OOTD.jpg" alt="Image 27">
+    <img src="images/CIRCLE.jpg" alt="Image 28">
+    <img src="images/KLCC.jpg" alt="Image 29">
+    <img src="images/COFFEE.jpg" alt="Image 30">
+    <img src="images/BOOTH.jpg" alt="Image 31">
+    <img src="images/HURE.jpg" alt="Image 32">
+    <img src="images/HIJAU.jpg" alt="Image 33">
+    <img src="images/SUNSETUITM.jpg" alt="Image 34">
+    <img src="images/COFFEE.jpg" alt="Image 35">
+    <img src="images/FINALEXAMSEM4.jpg" alt="Image 36">
+</section>
+
+<section class="video-section">
+    <h2>📹 My Videos</h2>
+
+    <div class="video-container">
+        <video controls>
+            <source src="videos/pantai.mp4" type="video/mp4">
+        </video>
+
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Designed for Educational Purposes | YAHRIZAN</p>
+    <div id="datetime"></div>
+</footer>
+
+<script>
+// ===== Date & Time =====
+function updateDateTime(){
+    const now = new Date();
+
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    let dayName = days[now.getDay()];
+    let date = now.getDate();
+    let month = months[now.getMonth()];
+    let year = now.getFullYear();
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let session = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+    minute = String(minute).padStart(2,"0");
+    second = String(second).padStart(2,"0");
+
+    document.getElementById("datetime").innerHTML =
+        `${dayName}, ${date} ${month} ${year} | ${hour}:${minute}:${second} ${session}`;
+}
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

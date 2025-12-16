@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yahrizan Personal website</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #FF4C4C;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff5050;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(255,76,76,0.7);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+nav a {
+    display: inline-block;
+    background: rgba(255,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #FF4C4C;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+
+/* ===== EDUCATION SECTION ===== */
+.education-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #f5e1d0;
+    grid-column: 1/-1;
+}
+
+p.description {
+    font-size: 18px;
+    color: #f5e1d0;
+    margin-bottom: 5px 0 15px 0;
+    grid-column: 1/-1;
+}
+
+/* ===== EDUCATION ===== */
+.education-card {
+    position: relative;
+    background: #330000;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #ff4d4d;
+}
+
+.education-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.education-card h3 {
+    margin: 15px 0 5px;
+    color: #ffe6e6;
+    font-size: 20px;
+}
+
+.education-card p {
+    color: #ffb3b3;
+    padding: 0 15px 15px;
+    font-size: 16px;
+}
+
+/* ===== Hover Effects ===== */
+.education-card:hover img {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.education-card:hover {
+    box-shadow: 0 15px 30px rgba(255,77,77,0.5);
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #ff0000, #ff9999);
+    animation: glow 1s infinite;
+}
+
+/* ===== CAPTION OVERLAY ===== */
+.education-card .caption {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255,77,77,0.9);
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+    transition: bottom 0.3s;
+}
+
+.education-card:hover .caption {
+    bottom: 0;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes glow {
+    0% { border-image-source: linear-gradient(45deg, #ff0000, #ff9999); }
+    50% { border-image-source: linear-gradient(45deg, #ff9999, #ff0000); }
+    100% { border-image-source: linear-gradient(45deg, #ff0000, #ff9999); }
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 2px solid #ff5050;
+    text-shadow: 0 0 10px red;
+}
+
+#datetime {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #F5EBDD;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>YAHRIZAN'S PERSONAL WEBSITE</h1>
+    <nav>
+        <a href="index2.html">HOME</a>
+        <a href="aboutme2.html">ABOUT ME</a>
+        <a href="family2.html">FAMILY</a>
+        <a href="experience2.html">EXPERIENCE</a>
+        <a href="friends2.html">FRIENDS</a>
+        <a href="education2.html" class="active">EDUCATION</a>
+        <a href="gallery2.html">GALLERY</a>
+        <a href="favourites2.html">FAVOURITES</a>
+        <a href="hobby2.html">HOBBY</a>
+    </nav>
+</header>
+
+<section class="education-container">
+    <h2>My Education Journey🎓</h2>
+    <p class="description">From my first steps in pre-school to my days at university, every school, every lesson, and every challenge has shaped me into the student I am today  ✨</p>
+
+    <!-- PRE-SCHOOL -->
+    <div class="education-card">
+        <img src="images/PRESCH.jpg" alt="Pre-School">
+        <h3>PRE-SCHOOL</h3>
+        <div class="caption">I attended Pre-School at Pra Sekolah Kebangsaan Paloh Rawa from 2009 to 2010, where I began developing my foundational skills in learning, social interaction, and early childhood education</div>
+    </div>
+
+    <!-- PRIMARY SCHOOL -->
+    <div class="education-card">
+        <img src="images/2016 WATIKAH PENGAWAS.jpg" alt="Primary School">
+        <h3>PRIMARY SCHOOL</h3>
+        <div class="caption">I attended Primary School at Sekolah Kebangsaan Paloh Rawa, Machang, Kelantan, where I built my foundational knowledge in core subjects and developed essential social and learning skills.</div>
+    </div>
+
+    <!-- SECONDARY SCHOOL -->
+    <div class="education-card">
+        <img src="images/spm2022.jpg" alt="Secondary School">
+        <h3>SECONDARY SCHOOL</h3>
+        <div class="caption">I attended Secondary School at Sekolah Menengah Kebangsaan Pangkal Meleret, Machang, Kelantan, where I further developed my academic knowledge, leadership skills, and participated in various co-curricular activities</div>
+    </div>
+
+    <!-- DIPLOMA -->
+    <div class="education-card">
+        <img src="images/DIPLOMA.jpg" alt="Diploma">
+        <h3>DIPLOMA</h3>
+        <div class="caption">I am pursuing a Diploma in Information Management at Universiti Teknologi MARA, Machang Branch</div>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 Designed for Educational Purposes | YAHRIZAN</p>
+    <div id="datetime"></div>
+</footer>
+
+<!--  TARIKH + MASA  -->
+<script>
+function updateDateTime(){
+    const now = new Date();
+
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    let dayName = days[now.getDay()];
+    let date = now.getDate();
+    let month = months[now.getMonth()];
+    let year = now.getFullYear();
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let session = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+    minute = String(minute).padStart(2,"0");
+    second = String(second).padStart(2,"0");
+
+    document.getElementById("datetime").innerHTML =
+        `${dayName}, ${date} ${month} ${year} | ${hour}:${minute}:${second} ${session}`;
+}
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yahrizan Personal website</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #FF4C4C;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff5050;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(255,76,76,0.7);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+nav a {
+    display: inline-block;
+    background: rgba(255,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #FF4C4C;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+/* ===== AUDIO PLAYER ===== */
+.audio-player {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.audio-player audio {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px red;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255,0,0,0.3);
+    border: 2px solid #ff0000;
+}
+
+h2 {
+    font-size: 28px;
+    color: #FF4C4C;
+    margin-bottom: 15px;
+}
+
+p.description {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #FF4C4C;
+}
+
+/* ===== ACCORDION ===== */
+.accordion {
+    text-align: left;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #ff0000;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion label {
+    display: block;
+    padding: 15px 20px;
+    background: #1a0000;
+    color: #FF4C4C;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accordion label:hover {
+    background: #330000;
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background: #1a0000;
+    padding: 0 20px;
+}
+
+.accordion input:checked ~ .content {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.accordion .content img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px;
+    border-radius: 15px;
+    border: 3px solid #FF4C4C;
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+.accordion .content p {
+    color: #FF4C4C;
+    text-align: center;
+    margin: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: #F5EBDD;
+    padding: 12px 0;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid #ff5050;
+    text-shadow: 0 0 4px red;
+    margin-top: 50px;
+}
+
+#datetime {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #F5EBDD;
+    font-weight: 600;
+    text-shadow: 0 0 3px red;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>YAHRIZAN'S PERSONAL WEBSITE</h1>
+    <nav>
+        <a href="index2.html">HOME</a>
+        <a href="aboutme2.html">ABOUT ME</a>
+        <a href="family2.html">FAMILY</a>
+        <a href="experience2.html" class="active">EXPERIENCE</a>
+        <a href="friends2.html">FRIENDS</a>
+        <a href="education2.html">EDUCATION</a>
+        <a href="gallery2.html">GALLERY</a>
+        <a href="favourites2.html">FAVOURITES</a>
+        <a href="hobby2.html">HOBBY</a>
+    </nav>
+</header>
+
+<!-- ===== AUDIO PLAYER ===== -->
+<div class="audio-player">
+    <audio controls>
+        <source src="audio/wizKhalifa.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<section class="experience-container">
+    <h2>🌟 My Experiences</h2>
+    <p class="description">Click on each experience to reveal more details and images.</p>
+
+    <!-- EXPERIENCE 1 -->
+    <div class="accordion">
+        <input type="checkbox" id="exp1">
+        <label for="exp1">MERCY MALAYSIA VOLUNTEERED</label>
+        <div class="content">
+            <img src="images/MERCYMALAYSIA.jpg" alt="Mercy Malaysia">
+            <p>I’m in the process of learning while also teaching children at school. Through this volunteer program, we focus on educating them about disaster preparedness.</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE 2 -->
+    <div class="accordion">
+        <input type="checkbox" id="exp2">
+        <label for="exp2">FESKO-16 BIRO PENGANGKUTAN</label>
+        <div class="content">
+            <img src="images/FESKO.jpg" alt="Fesko 16">
+            <p>Managing a large program at UiTM was challenging yet meaningful. I'm blessed with an experience that helped shape my confidence.</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE 3 -->
+    <div class="accordion">
+        <input type="checkbox" id="exp3">
+        <label for="exp3">JPNR EXCO SUKAN & KEBUDAYAAN 2024/2025</label>
+        <div class="content">
+            <img src="images/JPNR.jpg" alt="JPNR Exco">
+            <p>Holding a position taught me responsibility, discipline, and balance. It wasn’t easy, but I grew into someone stronger.</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE 4 -->
+    <div class="accordion">
+        <input type="checkbox" id="exp4">
+        <label for="exp4">HANDBALL CGAMES</label>
+        <div class="content">
+            <img src="images/BOLA BALING CGAMES.jpg" alt="Handball CGames">
+            <p>Besides handling the event, I was one of the NR contingent players. This remains one of my most precious diploma memories.</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE 5 -->
+    <div class="accordion">
+        <input type="checkbox" id="exp5">
+        <label for="exp5">INTERNSHIP AT AYMIN ASTONIANS INTERNATIONAL COLLEGE</label>
+        <div class="content">
+            <img src="images/internship.jpg" alt="Internship">
+            <p>Internship taught me more than skills — it introduced me to people who believed in me and helped me grow.</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE 6 -->
+    <div class="accordion">
+        <input type="checkbox" id="exp6">
+        <label for="exp6">MANAGED NR CONTINGENT FOR CGAMES AS JPNR EXCO SUKAN</label>
+        <div class="content">
+            <img src="images/CGAMES.jpg" alt="C-Games">
+            <p>Handling the biggest contingent was tough, but worth it. NR won first place — and all the hard work paid off beautifully.</p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2025 Designed for Educational Purposes | YAHRIZAN</p>
+    <p id="datetime"></p>
+</footer>
+
+<script>
+function updateDateTime(){
+    const now = new Date();
+
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    let dayName = days[now.getDay()];
+    let date = now.getDate();
+    let month = months[now.getMonth()];
+    let year = now.getFullYear();
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let session = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+    minute = String(minute).padStart(2,"0");
+    second = String(second).padStart(2,"0");
+
+    document.getElementById("datetime").innerHTML =
+        `${dayName}, ${date} ${month} ${year} | ${hour}:${minute}:${second} ${session}`;
+}
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yahrizan Personal website</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #FF4C4C;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff5050;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(255,76,76,0.7);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+nav a {
+    display: inline-block;
+    background: rgba(255,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #FF4C4C;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+
+/* ===== FAMILY SECTION ===== */
+.family-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #111;
+    border-radius: 20px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 25px red;
+}
+
+h2 {
+    font-size: 28px;
+    color: #ff4c4c;
+    text-shadow: 0 0 10px red;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* ===== HOME SECTION ===== */
+.intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 50px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* TEXT */
+.intro-text {
+    flex: 1 1 500px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.intro-text h2 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.quote {
+    font-style: italic;
+    border-left: 5px solid #F5EBDD;
+    padding-left: 18px;
+    margin: 25px auto;
+    max-width: 450px;
+    font-size: 17px;
+}
+
+/* ===== PROFILE ===== */
+.intro-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-bg {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, #F5EBDD 0%, #800000 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.profile-frame {
+    position: relative;
+    z-index: 1;
+    width: 280px;
+    height: 280px;
+    padding: 10px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.1);
+    border: 4px solid #F5EBDD;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-3d {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transform: perspective(800px) rotateY(-10deg) rotateX(5deg);
+    transition: 0.5s ease;
+}
+.profile-3d:hover {
+    transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(255,235,221,0.6);
+}
+
+/* ===== SOCIAL MEDIA ===== */
+.social-links { margin-top: 25px; }
+.social {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 22px;
+    font-weight: 700;
+    color: #F5EBDD;
+    border: 2px solid #F5EBDD;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.social:hover {
+    background: #F5EBDD;
+    color: #800000;
+    box-shadow: 0 8px 20px rgba(255,235,221,0.5);
+}
+.ig:hover { border-color: #ff8ab6; }
+.tt:hover { border-color: #00f2ea; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 2px solid #ff5050;
+    text-shadow: 0 0 10px red;
+}
+#datetime {
+    margin-top: 4px;
+    font-size: 14px; 
+    color: #F5EBDD;
+    font-weight: 600;
+    text-shadow: 0 0 3px red;
+}
+
+
+/* Tablet & small screens */
+@media (max-width: 768px) {
+
+    /* Navigation fix */
+    nav {
+        gap: 10px;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 14px;
+        border-radius: 20px;
+        transform: none !important;
+    }
+
+    /* Home section adjustments */
+    .intro-container { 
+        flex-direction: column-reverse; 
+        padding: 30px; 
+    }
+    .intro-text { 
+        text-align: center; 
+        padding: 0; 
+    }
+    .intro-image { 
+        margin-bottom: 30px; 
+    }
+    .profile-frame { 
+        width: 200px; 
+        height: 200px; 
+    }
+    .image-bg { 
+        width: 220px; 
+        height: 220px; 
+        filter: blur(60px); 
+    }
+}
+
+/* Smaller mobile screen */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 18px;
+    }
+
+    .intro-container {
+        padding: 20px;
+    }
+
+    .profile-frame { 
+        width: 180px; 
+        height: 180px; 
+    }
+
+    .image-bg { 
+        width: 200px; 
+        height: 200px; 
+        filter: blur(55px); 
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>YAHRIZAN'S PERSONAL WEBSITE</h1>
+    <nav>
+        <a href="index.html" class="active">HOME</a>
+        <a href="aboutme2.html">ABOUT ME</a>
+        <a href="family2.html">FAMILY</a>
+        <a href="experience2.html">EXPERIENCE</a>
+        <a href="friends2.html">FRIENDS</a>
+        <a href="education2.html">EDUCATION</a>
+        <a href="gallery2.html">GALLERY</a>
+        <a href="favourites2.html">FAVOURITES</a>
+        <a href="hobby2.html">HOBBY</a>
+    </nav>
+</header>
+
+<section class="home">
+    <div class="intro-container">
+
+        <div class="intro-image">
+            <div class="image-bg"></div>
+            <div class="profile-frame">
+                <img src="images/gambar yayah.JPG" class="profile-3d" alt="Yahrizan photo">
+            </div>
+        </div>
+        
+        <div class="intro-text">
+            <h2>Hello! I'm <span style="background:#F5EBDD;color:#800000;padding:6px 12px;border-radius:6px;">Yahrizan</span></h2>
+            <p>Welcome to my website. Here, I share my experience, education, family and friends .</p>
+
+            <p class="quote">"The more that you read, the more things you will know. The more that you learn, the more places you’ll go." <em>Dr. Seuss</em></p>
+            <p> Goal: I aim to perform well academically by dedicating time to understand and master my subjects. At the same time, I want to strengthen my soft skills, like collaborating effectively and communicating clearly, so I can grow as a competent and well-rounded student.</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/Yahrizann" target="_blank" class="social ig">
+                    <img src="images/instagramlogo.jpg" style="width:22px; vertical-align:middle; margin-right:6px;"> Instagram
+                </a>
+
+                <a href="https://www.tiktok.com/@Yahrizann" target="_blank" class="social tt">
+                    <img src="images/3dtiktok.jpg" style="width:22px; vertical-align:middle; margin-right:6px;"> TikTok
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2025 Designed for Educational Purposes | YAHRIZAN</p>
+    <p id="datetime" style="margin-top:6px; font-weight:bold; color:#F5EBDD; text-shadow: 0 0 8px red, 0 0 15px #ff4c4c;"></p>
+</footer>
+
+<!-- TARIKH + MASA LIVE -->
+<script>
+function updateDateTime(){
+    const now = new Date();
+
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    let dayName = days[now.getDay()];
+    let date = now.getDate();
+    let month = months[now.getMonth()];
+    let year = now.getFullYear();
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let session = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+    minute = String(minute).padStart(2,"0");
+    second = String(second).padStart(2,"0");
+
+    document.getElementById("datetime").innerHTML =
+        `${dayName}, ${date} ${month} ${year} | ${hour}:${minute}:${second} ${session}`;
+}
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

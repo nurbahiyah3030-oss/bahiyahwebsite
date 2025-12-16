@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yahrizan Personal website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #FF4C4C;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff5050;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(255,76,76,0.7);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+nav a {
+    display: inline-block;
+    background: rgba(255,0,0,0.15);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #FF4C4C;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+
+/* ===== HOBBY SECTION ===== */
+section h2{
+    color:#ff4c4c;
+    font-size: 32px;
+    margin-top:40px;
+    font-weight: 800;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #111;
+    border: 3px solid red;
+    box-shadow: 0 0 25px red;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-bottom: 3px solid red;
+}
+
+.slide p{
+    background: rgba(255,0,0,0.25);
+    padding:12px;
+    color:white;
+    font-size:22px;
+    font-weight:700;
+}
+
+/* BUTTON */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 14px;
+    font-size: 30px;
+    font-weight: bold;
+    transform: translateY(-50%);
+    color:white;
+    background: rgba(255,0,0,0.7);
+    border-radius: 50%;
+    user-select:none;
+    transition:.3s;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.prev:hover, .next:hover {
+    background:red;
+    box-shadow:0 0 15px red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #000000, #ff0000);
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 2px solid #ff5050;
+    text-shadow: 0 0 10px red;
+}
+
+#datetime {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #F5EBDD;
+    font-weight: 600;
+}
+
+@media(max-width:768px){
+    .slideshow-container{max-width:90%;}
+    .slide img{height:300px;}
+}
+</style>
+</head>
+
+
+
+<body>
+
+<header>
+    <h1>YAHRIZAN'S PERSONAL WEBSITE</h1>
+
+    <nav>
+        <a href="index2.html">HOME</a>
+        <a href="aboutme2.html">ABOUT ME</a>
+        <a href="family2.html">FAMILY</a>
+        <a href="experience2.html">EXPERIENCE</a>
+        <a href="friends2.html">FRIENDS</a>
+        <a href="education2.html">EDUCATION</a>
+        <a href="gallery2.html">GALLERY</a>
+        <a href="favourites2.html">FAVOURITES</a>
+        <a href="hobby2.html" class="active">HOBBY</a>
+    </nav>
+</header>
+
+
+<section>
+
+<h2>🎯 My Hobbies</h2>
+
+<div class="slideshow-container">
+    
+    <div class="slide">
+        <img src="images/MOVIE.jpg">
+        <p>WATCHING MOVIE</p>
+    </div>
+
+    <div class="slide">
+        <img src="images/READINGNOVEL.jpg">
+        <p>READING NOVELS</p>
+    </div>
+
+    <div class="slide">
+        <img src="images/PHOTOGRAPH.jpg">
+        <p>PHOTOGRAPHY</p>
+    </div>
+
+    <div class="slide">
+        <img src="images/COOKING.jpg">
+        <p>COOKING</p>
+    </div>
+
+    <div class="slide">
+        <img src="images/KDRAMA.jpg">
+        <p>WATCHING KDRAMA</p>
+    </div>
+
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+</div>
+
+</section>
+
+
+
+
+
+<footer>
+    <p>&copy; 2025 Designed for Educational Purposes | YAHRIZAN</p>
+    <div id="datetime"></div>
+</footer>
+
+
+<script>
+/* slideshow function */
+let index = 1;
+show(index);
+
+function moveSlide(n){ show(index += n); }
+
+function show(n){
+    let i;
+    let s = document.getElementsByClassName("slide");
+
+    if(n > s.length) index = 1;
+    if(n < 1) index = s.length;
+
+    for(i=0;i<s.length;i++){
+        s[i].style.display="none";
+    }
+    s[index-1].style.display="block";
+}
+
+/* MASA & TARIKH */
+function updateDT(){
+    const now=new Date();
+    const day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][now.getDay()];
+    const month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][now.getMonth()];
+    const t=`${day}, ${now.getDate()} ${month} ${now.getFullYear()} | ${now.toLocaleTimeString()}`;
+    document.getElementById("datetime").innerHTML=t;
+}
+setInterval(updateDT,1000);updateDT();
+</script>
+
+</body>
+</html>
